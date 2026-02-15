@@ -23,9 +23,14 @@ function About() {
 
         <section className="developer-section">
           <h2>על המפתחת</h2>
-          <div className="developer-info">
-            <p><strong>שם:</strong> ולריה רוסקובה</p>
-            <p><strong>תעודת זהות:</strong> 321469512</p>
+          <div className="developer-card">
+            <div className="developer-image">
+              <img src="/תמונה ולריה.jpg" alt="ולריה רוסקובה" />
+            </div>
+            <div className="developer-info">
+              <p><strong>שם:</strong> ולריה רוסקובה</p>
+              <p><strong>תעודת זהות:</strong> 321469512</p>
+            </div>
           </div>
         </section>
       </div>

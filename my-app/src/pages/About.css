@@ -5,44 +5,129 @@
 
 .about-section,
 .developer-section {
-  background-color: white;
   padding: 25px;
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .about-section,
+.light-mode .developer-section {
+  background-color: white;
+}
+
+.dark-mode .about-section,
+.dark-mode .developer-section {
+  background-color: #1e1e2f;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .about-section h2,
 .developer-section h2 {
-  color: #3498db;
   font-size: 24px;
   margin-bottom: 15px;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid;
   padding-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.light-mode .about-section h2,
+.light-mode .developer-section h2 {
+  color: #3498db;
+  border-color: #3498db;
+}
+
+.dark-mode .about-section h2,
+.dark-mode .developer-section h2 {
+  color: #64b5f6;
+  border-color: #64b5f6;
 }
 
 .about-section p {
   font-size: 18px;
   line-height: 1.6;
-  color: #555;
   margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+.light-mode .about-section p {
+  color: #555;
+}
+
+.dark-mode .about-section p {
+  color: #b0b0b0;
+}
+
+.developer-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.light-mode .developer-card {
+  background-color: #f8f9fa;
+  border-right: 4px solid #3498db;
+}
+
+.dark-mode .developer-card {
+  background-color: #252538;
+  border-right: 4px solid #64b5f6;
+}
+
+.developer-image {
+  flex-shrink: 0;
+}
+
+.developer-image img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 3px solid;
+  transition: border-color 0.3s ease;
+}
+
+.light-mode .developer-image img {
+  border-color: #3498db;
+}
+
+.dark-mode .developer-image img {
+  border-color: #64b5f6;
 }
 
 .developer-info {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  border-right: 4px solid #3498db;
+  flex: 1;
 }
 
 .developer-info p {
   font-size: 18px;
   margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.light-mode .developer-info p {
   color: #2c3e50;
 }
 
+.dark-mode .developer-info p {
+  color: #e0e0e0;
+}
+
 .developer-info strong {
+  transition: color 0.3s ease;
+}
+
+.light-mode .developer-info strong {
   color: #3498db;
+}
+
+.dark-mode .developer-info strong {
+  color: #64b5f6;
 }
 
 @media (max-width: 768px) {
@@ -58,5 +143,15 @@
   .about-section p,
   .developer-info p {
     font-size: 16px;
+  }
+
+  .developer-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .developer-image img {
+    width: 120px;
+    height: 120px;
   }
 }

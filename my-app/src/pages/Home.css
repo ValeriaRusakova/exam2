@@ -8,16 +8,36 @@
 .select-container label {
   font-size: 20px;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.light-mode .select-container label {
   color: #2c3e50;
+}
+
+.dark-mode .select-container label {
+  color: #e0e0e0;
 }
 
 .select-container select {
   padding: 12px;
   font-size: 16px;
-  border: 2px solid #3498db;
+  border: 2px solid;
   border-radius: 5px;
-  background-color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .select-container select {
+  background-color: white;
+  border-color: #3498db;
+  color: #2c3e50;
+}
+
+.dark-mode .select-container select {
+  background-color: #1e1e2f;
+  border-color: #64b5f6;
+  color: #e0e0e0;
 }
 
 .select-container select:disabled {
@@ -27,25 +47,50 @@
 
 .cities-count {
   font-size: 14px;
-  color: #666;
   margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.light-mode .cities-count {
+  color: #666;
+}
+
+.dark-mode .cities-count {
+  color: #999;
 }
 
 .loading {
   text-align: center;
   font-size: 20px;
-  color: #3498db;
   margin: 20px 0;
+  transition: color 0.3s ease;
+}
+
+.light-mode .loading {
+  color: #3498db;
+}
+
+.dark-mode .loading {
+  color: #64b5f6;
 }
 
 .error {
   text-align: center;
   font-size: 18px;
-  color: #e74c3c;
   margin: 20px 0;
   padding: 15px;
-  background-color: #fadbd8;
   border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .error {
+  color: #e74c3c;
+  background-color: #fadbd8;
+}
+
+.dark-mode .error {
+  color: #ff6b6b;
+  background-color: #3d1f1f;
 }
 
 .weather-card {

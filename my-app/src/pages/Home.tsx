@@ -181,7 +181,7 @@ function Home() {
             <p className="country">{weather.location.country}</p>
             <p className="temp">{weather.current.temp_c}°C</p>
             <p className="condition">{weather.current.condition.text}</p>
-            <p className="wind">מהירות רוח: {weather.current.wind_kph} kph</p>
+            <p className="wind">Wind Speed: {weather.current.wind_kph} kph</p>
           </div>
         )}
       </div>

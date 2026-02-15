@@ -3,19 +3,47 @@
   border-collapse: collapse;
   margin: 20px 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.light-mode .history-table {
   background-color: white;
 }
 
+.dark-mode .history-table {
+  background-color: #1e1e2f;
+}
+
 .history-table thead {
-  background-color: #3498db;
   color: white;
+  transition: background-color 0.3s ease;
+}
+
+.light-mode .history-table thead {
+  background-color: #3498db;
+}
+
+.dark-mode .history-table thead {
+  background-color: #0f3460;
 }
 
 .history-table th,
 .history-table td {
   padding: 15px;
   text-align: right;
-  border: 1px solid #ddd;
+  border: 1px solid;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .history-table th,
+.light-mode .history-table td {
+  border-color: #ddd;
+}
+
+.dark-mode .history-table th,
+.dark-mode .history-table td {
+  border-color: #333;
+  color: #e0e0e0;
 }
 
 .history-table th {
@@ -23,12 +51,20 @@
   font-weight: bold;
 }
 
-.history-table tbody tr:nth-child(even) {
+.light-mode .history-table tbody tr:nth-child(even) {
   background-color: #f8f9fa;
 }
 
-.history-table tbody tr:hover {
+.dark-mode .history-table tbody tr:nth-child(even) {
+  background-color: #252538;
+}
+
+.light-mode .history-table tbody tr:hover {
   background-color: #e8f4f8;
+}
+
+.dark-mode .history-table tbody tr:hover {
+  background-color: #2d2d44;
 }
 
 @media (max-width: 768px) {
