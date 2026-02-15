@@ -20,11 +20,11 @@
 }
 
 .light-mode .history-table thead {
-  background-color: #3498db;
+  background-color: #6c757d;
 }
 
 .dark-mode .history-table thead {
-  background-color: #0f3460;
+  background-color: #3d3d3d;
 }
 
 .history-table th,
@@ -56,15 +56,15 @@
 }
 
 .dark-mode .history-table tbody tr:nth-child(even) {
-  background-color: #252538;
+  background-color: #2d2d2d;
 }
 
 .light-mode .history-table tbody tr:hover {
-  background-color: #e8f4f8;
+  background-color: #e9ecef;
 }
 
 .dark-mode .history-table tbody tr:hover {
-  background-color: #2d2d44;
+  background-color: #3d3d3d;
 }
 
 @media (max-width: 768px) {

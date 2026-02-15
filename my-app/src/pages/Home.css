@@ -20,24 +20,40 @@
 }
 
 .select-container select {
-  padding: 12px;
+  padding: 14px 16px;
   font-size: 16px;
   border: 2px solid;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.select-container select:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .light-mode .select-container select {
   background-color: white;
-  border-color: #3498db;
-  color: #2c3e50;
+  border-color: #ddd;
+  color: #333;
+}
+
+.light-mode .select-container select:focus {
+  border-color: #666;
+  outline: none;
 }
 
 .dark-mode .select-container select {
-  background-color: #1e1e2f;
-  border-color: #64b5f6;
+  background-color: #2d2d2d;
+  border-color: #555;
   color: #e0e0e0;
+}
+
+.dark-mode .select-container select:focus {
+  border-color: #888;
+  outline: none;
 }
 
 .select-container select:disabled {
@@ -67,11 +83,11 @@
 }
 
 .light-mode .loading {
-  color: #3498db;
+  color: #666;
 }
 
 .dark-mode .loading {
-  color: #64b5f6;
+  color: #aaa;
 }
 
 .error {
@@ -94,14 +110,40 @@
 }
 
 .weather-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 30px;
-  border-radius: 15px;
+  padding: 40px;
+  border-radius: 20px;
   text-align: center;
-  margin: 20px auto;
-  max-width: 400px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  max-width: 420px;
+  transition: all 0.4s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.light-mode .weather-card {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .weather-card {
+  background: linear-gradient(135deg, #3d3d3d 0%, #2d2d2d 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
 .weather-card img {
