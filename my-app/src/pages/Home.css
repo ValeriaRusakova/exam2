@@ -1,0 +1,109 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.select-container label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.select-container select {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.select-container select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cities-count {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 20px;
+  color: #3498db;
+  margin: 20px 0;
+}
+
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #e74c3c;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fadbd8;
+  border-radius: 5px;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.weather-card h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.weather-card .country {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 5px 0;
+}
+
+.weather-card .temp {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.weather-card .condition {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.weather-card .wind {
+  font-size: 18px;
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .weather-card {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .weather-card .temp {
+    font-size: 36px;
+  }
+
+  .weather-card h2 {
+    font-size: 24px;
+  }
+}
